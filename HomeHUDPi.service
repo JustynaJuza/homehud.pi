@@ -1,0 +1,12 @@
+[Unit]
+Description=HomeHUDPi Service
+After=multi-user.target
+
+[Service]
+Type=idle
+Restart=always
+RestartSec=3
+ExecStart=/usr/bin/python3 /home/pi/HomeHUD.Pi/HomeHUDPi.py
+
+[Install]
+WantedBy=multi-user.target
